@@ -1,0 +1,28 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block body %}
+   <h2>Applicant Detail</h2>
+   <div class="row">
+      <div class="col-md-3"><b>Name</b></div>
+      <div class="col-md-3">{{ application.name }}</div>
+      <div class="col-md-3"><b>Email</b></div>
+      <div class="col-md-3">{{ application.email }}</div>
+   </div>
+   <div class="row">
+      <div class="col-md-3"><b>Address</b></div>
+      <div class="col-md-3">{{ application.address }}</div>
+      <div class="col-md-3"><b>Country</b></div>
+      <div class="col-md-3">{{ application.country }}</div>
+   </div>
+   <div class="row">
+      <div class="col-md-3"><b>City</b></div>
+      <div class="col-md-3">{{ application.city }}</div>
+      <div class="col-md-3"><b>IP</b></div>
+      <div class="col-md-3">{{ application.ip }}</div>
+   </div>
+   <div class="row">
+      <div class="col-md-3"><b>Apply Date</b></div>
+      <div class="col-md-3">{{ application.createdAt|date('F j,Y') }}</div>
+      <div class="col-md-3">Attachment</div>
+      <div class="col-md-3"><a href="/admin/download/{{ application.fileName }} " target="_blank">Download </a> </div>
+   </div>
+{% endblock %}

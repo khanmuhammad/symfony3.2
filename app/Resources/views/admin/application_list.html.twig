@@ -1,0 +1,8 @@
+<tr>
+   <td>{{ application.name }} </td>
+   <td>{{  application.email }}</td>
+   <td>{{ application.address }} </td>
+   <td>{{ application.city }}   </td>
+   <td>{{ application.createdAt|date('F j,Y') }} </td>
+   <td> <a href="/admin/application/{{ application.id }}" class="btn btn-success">Detail</a>  </td>
+</tr>

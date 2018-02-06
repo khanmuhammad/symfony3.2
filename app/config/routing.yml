@@ -1,0 +1,20 @@
+application_form:
+        path:      /
+        defaults:  { _controller: AppBundle:Application:index }
+application_list:
+        path:      /admin
+        defaults:  { _controller: AppBundle:Admin:list }
+application_detail:
+        path:      /admin/application/{id}
+        defaults:  { _controller: AppBundle:Admin:applicationDetail }
+application_attchment_download:
+        path:      /admin/download/{filename}
+        defaults:  { _controller: AppBundle:Admin:downloadFile }
+        requirements:
+                filename: '.+'
+login:
+        path:      /login
+        defaults:  { _controller: AppBundle:Security:login }
+logout:
+        path:      /logout
+        defaults:  { _controller: AppBundle:Security:logout }

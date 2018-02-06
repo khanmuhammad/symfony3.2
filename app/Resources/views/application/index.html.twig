@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="col-md-4 col-md-offset-4">
+    <h2 class="text-center" id="form-heading">Submit application</h2>
+     {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+</div>
+{% endblock %}

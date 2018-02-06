@@ -1,0 +1,22 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block body %}
+   <h2>Applicant Listing</h2>
+   <table class="table">
+      <thead>
+      <tr>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Address</th>
+         <th>City</th>
+         <th>Apply Date</th>
+         <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for application in applications %}
+         {% include ('::admin/application_list.html.twig') %}
+      {% endfor %}
+      </tbody>
+   </table>
+   </div>
+{% endblock %}
